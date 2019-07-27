@@ -1,0 +1,57 @@
+[binaries]
+c       = 'arm-none-eabi-gcc'
+cpp     = 'arm-none-eabi-g++'
+ld      = 'lld'
+ar      = 'arm-none-eabi-ar'
+as      = 'arm-none-eabi-as'
+size    = 'arm-none-eabi-size'
+objdump = 'arm-none-eabi-objdump'
+objcopy = 'arm-none-eabi-objcopy'
+strip   = 'arm-none-eabi-strip'
+gdb     = 'arm-none-eabi-gdb'
+openocd = 'openocd'
+
+[properties]
+c_args        = ['-mthumb',
+                 '-mcpu=cortex-m7',
+                 '-mfpu=fpv5-d16',
+                 '-mfloat-abi=hard',
+                 '-fdata-sections',
+                 '-ffunction-sections',
+                 '-Wall',
+                 '-ggdb3']
+c_std         = 'c17'
+
+cpp_args      = ['-mthumb',
+                 '-mcpu=cortex-m7',
+                 '-mfpu=fpv5-d16',
+                 '-mfloat-abi=hard',
+                 '-fdata-sections',
+                 '-ffunction-sections',
+                 '-Wall',
+                 '-ggdb3',
+                 '-fno-unwind-tables',
+                 '-fno-exceptions',
+                 '-fno-rtti']
+cpp_std       = 'c++17'
+cpp_eh        = 'none'
+
+c_link_args   = ['-Wl,--gc-sections',
+                 '--specs=nano.specs',
+                 '-Tmem.ld',
+                 '-lc',
+                 '-lm',
+                 '-lnosys']
+# '-Wl,-Map/bin/cdh.map'
+cpp_link_args = ['-Wl,--gc-sections',
+                 '--specs=nano.specs',
+                 '-Tmem.ld',
+                 '-lc',
+                 '-lm',
+                 '-lnosys']
+
+[host_machine]
+system     = 'none'
+cpu_family = 'arm'
+cpu        = 'cortex-m7'
+endian     = 'little'
