@@ -104,4 +104,15 @@ SECTIONS {
 		libm.a ( * )
 		libgcc.a ( * )
 	}
+
+        /*
+         * Targets for radiation testing.
+         */
+
+         .dtcm_target  (NOLOAD) : {} >DTCMRAM
+         .itcm_target  (NOLOAD) : {} >ITCMRAM
+         .d1_target    (NOLOAD) : {} >RAM_D1
+         .d2_target    (NOLOAD) : {} >RAM_D2
+         .d3_target    (NOLOAD) : {} >RAM_D3
+         .flash_target (NOLOAD) : {} >FLASH
 }
