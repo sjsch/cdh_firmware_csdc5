@@ -59,3 +59,13 @@ compile_commands.json
 
 .cquery_cached_index
 docs/doxy
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Emacs
+.ccls-cache
+.dir-locals.el
