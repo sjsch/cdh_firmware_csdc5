@@ -17,7 +17,7 @@ file(GLOB GCC_INCLUDES /usr/arm-none-eabi/include/c++/*/ /usr/arm-none-eabi/incl
 include_directories(${GCC_INCLUDES})
 
 set(FLAGS_COMMON "-target armv7em-none-eabihf -I/usr/arm-none-eabi/include" CACHE INTERNAL "C / C++ common Flags")
-set(FLAGS_CXX "-std=c++17 -Wno-register -fno-unwind-tables -fno-exceptions -fno-rtti" CACHE INTERNAL "C++ only Flags")
+set(FLAGS_CXX "-std=c++2a -Wno-register -fno-unwind-tables -fno-exceptions -fno-rtti" CACHE INTERNAL "C++ only Flags")
 set(FLAGS_C "" CACHE INTERNAL "C only Flags")
 set(FLAGS_LINKER "-Wl,--gc-sections -L/usr/arm-none-eabi/lib -nostdlib -Tmem.ld -lstdc++ -lc -lm -lnosys -Wl,-Map=bin/${CMAKE_PROJECT_NAME}.map" CACHE INTERNAL "Linker flags")
 

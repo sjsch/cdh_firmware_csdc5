@@ -70,6 +70,11 @@ public:
     Async<Status> transmit(const uint8_t *, size_t len);
     Async<Status> transmit(const char *);
 
+    template <size_t S>
+    Async<Status> transmit(const std::array<uint8_t, S> d) {
+        return transmit(d.data(), d.size());
+    }
+
     Async<Status> receive(uint8_t *data, size_t len);
 
 protected:
