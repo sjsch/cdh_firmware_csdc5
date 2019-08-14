@@ -4,8 +4,6 @@
 #include <cstdint>
 #include <cstdlib>
 
-// #include <
-
 /*
  * Memory layout we're interested in testing:
  *

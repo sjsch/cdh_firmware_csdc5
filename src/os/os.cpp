@@ -41,7 +41,7 @@ void Task::delay(uint32_t ms) { vTaskDelay(ms / portTICK_PERIOD_MS); }
  * @param period How much time (in ms) a single period should occupy,
  * execution time *and* delay time.
  */
-WakeupTimer::WakeupTimer(uint32_t period) : period(period), last_wake(0) {}
+WakeupTimer::WakeupTimer(uint32_t period) : period(period / portTICK_PERIOD_MS), last_wake(0) {}
 
 /**
  * @brief Call at the end of the task to delay the right amount of time.

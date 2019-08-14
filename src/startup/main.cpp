@@ -3,8 +3,15 @@
 #include "os/os.h"
 #include "startup/rad_testing.h"
 
+#include <stm32h7xx_hal_iwdg.h>
+
+#define IWDG_ENABLE 1
+
 void init_func();
 StaticTask<4096> init_task{"INIT", 0, init_func};
+
+void iwdg_func();
+StaticTask<128> iwdg_task{"IWDG", 1, iwdg_func};
 
 /**
  * @brief Main entry point for Trillium's firmware.
@@ -29,8 +36,29 @@ int main() {
 
     init_task.start();
 
+#if IWDG_ENABLE
+    iwdg_task.start();
+#endif
+
     // Does not return.
     os_init();
+}
+
+IWDG_HandleTypeDef iwdg;
+
+void iwdg_func() {
+    WakeupTimer wakeup{400};
+
+    // need to refresh at least every 500ms
+    __HAL_DBGMCU_FREEZE_IWDG1();
+    iwdg.Instance = IWDG1;
+    iwdg.Init = {IWDG_PRESCALER_64, 0xFF, 0x0fff};
+    HAL_IWDG_Init(&iwdg);
+
+    while (1) {
+        HAL_IWDG_Refresh(&iwdg);
+        wakeup.sleep();
+    }
 }
 
 /**
