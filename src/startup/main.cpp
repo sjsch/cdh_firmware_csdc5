@@ -1,14 +1,14 @@
 #include "hardware/clock.h"
 #include "hardware/init.h"
+#include "hardware/uart.h"
 #include "os/os.h"
 #include "startup/rad_testing.h"
 
-#include <stm32h7xx_hal_iwdg.h>
-
-#define IWDG_ENABLE 1
+UART uart{UART::U3, 9600, GPIO::D, 8, 9};
+GPIO led{GPIO::B, 7, GPIO::OutputPP, GPIO::None, 0};
 
 void init_func();
-StaticTask<4096> init_task{"INIT", 0, init_func};
+StaticTask<128> init_task{"INIT", 0, init_func};
 
 void iwdg_func();
 StaticTask<128> iwdg_task{"IWDG", 1, iwdg_func};
@@ -67,6 +67,9 @@ void iwdg_func() {
  */
 void init_func() {
     rad_target_main();
+
+    led.init();
+    led.write(true);
 
     init_task.stop();
 }
