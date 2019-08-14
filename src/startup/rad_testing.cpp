@@ -62,7 +62,7 @@ void fill_ram_prng(uint8_t *section, uint32_t len) {
         *p = xorshift(state);
 }
 
-UART uart{UART::U3, 115200, GPIO_D, 8, 9};
+UART uart{UART::U3, 115200, GPIO::D, 8, 9};
 
 void check_ram_constant(const uint8_t *section, uint32_t len, uint8_t fill) {
     for (auto *p = section; p < section + len; p++) {

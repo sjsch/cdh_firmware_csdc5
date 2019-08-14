@@ -4,7 +4,6 @@
 #include "os/os.h"
 #include "startup/rad_testing.h"
 
-UART uart{UART::U3, 9600, GPIO::D, 8, 9};
 GPIO led{GPIO::B, 7, GPIO::OutputPP, GPIO::None, 0};
 
 void init_func();

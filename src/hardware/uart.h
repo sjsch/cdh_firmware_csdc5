@@ -7,6 +7,8 @@
 #include "os/async.h"
 #include "util/lookup.h"
 
+#include <array>
+
 /*
  * Need to forward-declare interrupt handlers and callbacks so they
  * can be declared friends later.
