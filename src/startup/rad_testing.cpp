@@ -97,38 +97,36 @@ void check_ram_prng(const uint8_t *section, uint32_t len) {
     }
 }
 
-template <size_t N>
-void fill_section(uint8_t (&section)[3][N], const char *name) {
+void fill_section(uint8_t *section, uint32_t len, const char *name) {
     uart.transmit("[rad target] filling ").block();
     uart.transmit(name).block();
     uart.transmit(" target...\r\n").block();
-    fill_ram_constant(section[0], sizeof section[0], 0);
-    fill_ram_constant(section[1], sizeof section[1], 0xff);
-    fill_ram_prng(section[2], sizeof section[2]);
+    fill_ram_constant(section, len, 0);
+    fill_ram_constant(section + len, len, 0xff);
+    fill_ram_prng(section + len*2, len);
     uart.transmit("[rad target] done\r\n").block();
 }
 
-template <size_t N>
-void check_section(uint8_t (&section)[3][N], const char *name) {
-    check_ram_constant(section[0], sizeof section[0], 0);
-    check_ram_constant(section[1], sizeof section[1], 0xff);
-    check_ram_prng(section[2], sizeof section[2]);
+void check_section(uint8_t *section, uint32_t len, const char *name) {
+    check_ram_constant(section, len, 0);
+    check_ram_constant(section + len, len, 0xff);
+    check_ram_prng(section + len*2, len);
 }
 
 void rad_target_main() {
     uart.init();
     uart.transmit("[rad target] start\r\n").block();
 
-    fill_section(dtcm_target, "DTCM");
-    fill_section(d1_target, "D1");
-    fill_section(d2_target, "D2");
-    fill_section(d3_target, "D3");
+    fill_section(dtcm_target[0], sizeof dtcm_target[0], "DTCM");
+    fill_section(d1_target[0], sizeof d1_target[0], "D1");
+    fill_section(d2_target[0], sizeof d2_target[0], "D2");
+    fill_section(d3_target[0], sizeof d3_target[0], "D3");
 
     while (1) {
-        check_section(dtcm_target, "DTCM");
-        check_section(d1_target, "D1");
-        check_section(d2_target, "D2");
-        check_section(d3_target, "D3");
+        check_section(dtcm_target[0], sizeof dtcm_target[0], "DTCM");
+        check_section(d1_target[0], sizeof d1_target[0], "D1");
+        check_section(d2_target[0], sizeof d2_target[0], "D2");
+        check_section(d3_target[0], sizeof d3_target[0], "D3");
     }
 
     uart.transmit("[rad target] stop\r\n").block();
