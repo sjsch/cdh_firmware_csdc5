@@ -58,11 +58,22 @@ void iwdg_func() {
     }
 }
 
+#if TRILLIUM==1
+GPIO nrst{GPIO::F, 13, GPIO::OutputPP, GPIO::Pullup, 0};
+#endif
+
 /**
  * The task that runs immediately after the processor starts.  Unlike
  * @ref main, it is safe to use asynchronous or blocking calls here.
  */
 void init_func() {
+#if TRILLIUM==1
+    nrst.init();
+    nrst.write(false);
+    Task::delay(1);
+    nrst.write(true);
+#endif
+
     rad_target_main();
 
     init_task.stop();
