@@ -29,6 +29,9 @@ class Tee(object):
     def __exit__(self, _type, _value, _traceback):
         pass
 
+    def flush(self):
+        self.file.flush()
+
 ffi = cffi.FFI()
 
 tee = Tee(sys.argv[1], 'w')

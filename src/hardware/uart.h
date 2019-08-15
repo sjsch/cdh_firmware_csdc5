@@ -64,7 +64,7 @@ public:
     Async<Status> transmit(const char *);
 
     template <size_t S>
-    Async<Status> transmit(const std::array<uint8_t, S> d) {
+    Async<Status> transmit(const std::array<uint8_t, S> &d) {
         return transmit(d.data(), d.size());
     }
 
