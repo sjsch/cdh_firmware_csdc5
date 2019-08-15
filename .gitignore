@@ -69,3 +69,5 @@ rules.ninja
 # Emacs
 .ccls-cache
 .dir-locals.el
+
+*.log
