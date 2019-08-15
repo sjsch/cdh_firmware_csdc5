@@ -1,7 +1,7 @@
 #include <stm32h7xx_hal.h>
 
 #include "FreeRTOS.h"
-#include "interrupts.h"
+#include "hardware/interrupts.h"
 
 extern "C" void xPortSysTickHandler();
 
@@ -17,4 +17,10 @@ extern "C" void xPortSysTickHandler();
 void handle_systick() {
     xPortSysTickHandler();
     HAL_IncTick();
+}
+
+void handle_hardfault() {
+    while (1) {
+        __asm__("nop;");
+    }
 }

@@ -33,15 +33,15 @@ add_library(sthal STATIC ${HAL_SOURCES})
 add_library(freertos STATIC ${RTOS_SOURCES})
 add_library(hydrogen STATIC ${HYDROGEN_SOURCES})
 
-add_executable(csdc5-a.elf ${SOURCES} ${ASM_SOURCES})
+add_executable(csdc5-a.elf ${ASM_SOURCES} ${SOURCES})
 set_target_properties(csdc5-a.elf PROPERTIES COMPILE_DEFINITIONS "TRILLIUM=1")
 target_link_libraries(csdc5-a.elf sthal freertos hydrogen)
 
-add_executable(csdc5-b.elf ${SOURCES} ${ASM_SOURCES})
+add_executable(csdc5-b.elf ${ASM_SOURCES} ${SOURCES})
 set_target_properties(csdc5-b.elf PROPERTIES COMPILE_DEFINITIONS "TRILLIUM=2")
 target_link_libraries(csdc5-b.elf sthal freertos hydrogen)
 
-add_executable(csdc5-c.elf ${SOURCES} ${ASM_SOURCES})
+add_executable(csdc5-c.elf ${ASM_SOURCES} ${SOURCES})
 set_target_properties(csdc5-c.elf PROPERTIES COMPILE_DEFINITIONS "TRILLIUM=3")
 target_link_libraries(csdc5-c.elf sthal freertos hydrogen)
 

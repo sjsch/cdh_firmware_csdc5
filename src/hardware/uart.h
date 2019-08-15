@@ -4,6 +4,7 @@
 
 #include "hardware/gpio.h"
 #include "hardware/hardware.h"
+#include "hardware/interrupts.h"
 #include "os/async.h"
 #include "util/lookup.h"
 
@@ -16,15 +17,6 @@
 extern "C" void HAL_UART_TxCpltCallback(void *, UART_HandleTypeDef *);
 extern "C" void HAL_UART_TxAbortCallback(void *, UART_HandleTypeDef *);
 extern "C" void HAL_UART_ErrorCallback(void *, UART_HandleTypeDef *);
-
-extern "C" void handle_usart1_irq();
-extern "C" void handle_usart2_irq();
-extern "C" void handle_usart3_irq();
-extern "C" void handle_uart4_irq();
-extern "C" void handle_uart5_irq();
-extern "C" void handle_usart6_irq();
-extern "C" void handle_uart7_irq();
-extern "C" void handle_uart8_irq();
 
 /**
  * @brief Nonblocking UART peripheral.
