@@ -74,12 +74,13 @@ UART uart{UART::U5, 115200, GPIO::B, 13, 12};
 UART uart{UART::U5, 115200, GPIO::B, 13, 12};
 #endif
 
-#if TRILLIUM==2
-
-#endif
-
-#if TRILLIUM==3
-
+#if TRILLIUM==1
+UART uart_b{UART::U7, 115200, GPIO::E, 8, 7};
+UART uart_c{UART::U6, 115200, GPIO::G, 14, 9};
+#elif TRILLIUM==2
+UART uart_out{UART::U7, 115200, GPIO::E, 8, 7};
+#elif TRILLIUM==3
+UART uart_out{UART::U6, 115200, GPIO::G, 14, 9};
 #endif
 
 void check_ram_constant(const uint8_t *section, uint32_t len, uint8_t fill) {
@@ -146,6 +147,13 @@ void hash_main() {
     static uint8_t hash[hydro_hash_BYTES];
     static uint8_t buf[8];
 
+#if TRILLIUM==2 || TRILLIUM==3
+    uart_out.init();
+#elif TRILLIUM==1
+    uart_b.init();
+    uart_c.init();
+#endif
+
 #if TRILLIUM==1
     uart.transmit("[rad compute] start\r\n").block();
 #endif
@@ -158,7 +166,25 @@ void hash_main() {
             hydro_hash_hash(hash, sizeof hash, hash, sizeof hash, hydro_context, nullptr);
         }
 
+        uint8_t ready = 1;
+#if TRILLIUM==2 || TRILLIUM==3
+        uart_out.receive(&ready, 1).block();
+        uart_out.transmit(hash, sizeof hash).block();
+#elif TRILLIUM==1
+        static uint8_t hash_b[hydro_hash_BYTES];
+        static uint8_t hash_c[hydro_hash_BYTES];
+
+        uart.transmit("[rad compute] ready b\r\n").block();
+        uart_b.transmit(&ready, 1).block();
+        uart_b.receive(hash_b, sizeof hash_b).block();
+        uart.transmit("[rad compute] ready c\r\n").block();
+        uart_c.transmit(&ready, 1).block();
+        uart_c.receive(hash_c, sizeof hash_c).block();
+        uart.transmit("[rad compute] received\r\n").block();
         uart.transmit(hash, sizeof hash).block();
+        uart.transmit(hash_b, sizeof hash_b).block();
+        uart.transmit(hash_c, sizeof hash_c).block();
+#endif
     }
 
 #if TRILLIUM==1
