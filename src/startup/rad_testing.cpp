@@ -140,7 +140,7 @@ GPIO led{GPIO::B, 0, GPIO::OutputPP, GPIO::None, 0};
 GPIO led{GPIO::B, 14, GPIO::OutputPP, GPIO::None, 0};
 #endif
 
-const char * hydro_context = "CONTEXT";
+const char * hydro_context = "CONTEXT!";
 constexpr int rounds = 10000;
 
 void hash_main() {
