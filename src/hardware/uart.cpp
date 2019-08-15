@@ -126,7 +126,7 @@ UART_HandleTypeDef *UART::uart_handles[8]; //< The interrupt callbacks
  * used.
  */
 const uint8_t UART::gpio_afs[] = {
-    0, 0, GPIO_AF7_USART3, 0, 0, 0, 0, 0,
+    0, 0, GPIO_AF7_USART3, 0, GPIO_AF14_UART5, 0, 0, 0,
 };
 
 /**

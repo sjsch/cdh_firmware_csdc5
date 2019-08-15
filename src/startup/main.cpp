@@ -4,14 +4,6 @@
 #include "os/os.h"
 #include "startup/rad_testing.h"
 
-#if TRILLIUM==1
-GPIO led{GPIO::B, 7, GPIO::OutputPP, GPIO::None, 0};
-#elif TRILLIUM==2
-GPIO led{GPIO::B, 0, GPIO::OutputPP, GPIO::None, 0};
-#elif TRILLIUM==3
-GPIO led{GPIO::B, 14, GPIO::OutputPP, GPIO::None, 0};
-#endif
-
 void init_func();
 StaticTask<128> init_task{"INIT", 0, init_func};
 
@@ -71,9 +63,6 @@ void iwdg_func() {
  * @ref main, it is safe to use asynchronous or blocking calls here.
  */
 void init_func() {
-    led.init();
-    led.write(true);
-
     rad_target_main();
 
     init_task.stop();

@@ -1,0 +1,312 @@
+00.000010 [rad target] done
+00.000059 
+00.000085 [rad target] filling D1 target...
+00.000096 
+00.108465 [rad target] done
+00.108636 
+00.112438 [rad target] filling D2 target...
+00.112565 
+00.202530 [rad target] done
+00.202748 
+00.206404 [rad target] filling D3 target...
+00.206590 
+00.222423 [rad target] done
+00.222569 
+29.260403 [240334b0] error! Expected ff, got f7
+29.261236 
+29.264210 [240334b1] error! Expected ff, got 00
+29.264319 
+29.409196 [240334b0] error! Expected ff, got f7
+29.409492 
+29.412150 [240334b1] error! Expected ff, got 00
+29.412241 
+29.433404 [24049e20] error! Expected b54bce66, got b500cf66
+29.433520 
+29.536265 [2400ba92] error! Expected 00, got 80
+29.536422 
+29.550157 [2401cad2] error! Expected 00, got 10
+29.551252 
+29.569370 [240334b0] error! Expected ff, got f7
+29.569506 
+29.573238 [240334b1] error! Expected ff, got 00
+29.573289 
+29.593313 [24049e20] error! Expected b54bce66, got b500cf66
+29.593652 
+29.696292 [2400ba92] error! Expected 00, got 80
+29.696484 
+29.711185 [2401cad2] error! Expected 00, got 10
+29.711304 
+29.729293 [240334b0] error! Expected ff, got f7
+29.729698 
+29.733145 [240334b1] error! Expected ff, got 00
+29.733269 
+29.753331 [24049e20] error! Expected b54bce66, got b500cf66
+29.754201 
+29.770367 [24059888] error! Expected 02725666, got 02720076
+29.771202 
+29.861198 [2400ba92] error! Expected 00, got 80
+29.861668 
+29.876309 [2401cad2] error! Expected 00, got 10
+29.876593 
+29.894189 [240334b0] error! Expected ff, got f7
+29.894407 
+29.897982 [240334b1] error! Expected ff, got 00
+29.898079 
+29.918331 [24049e20] error! Expected b54bce66, got b500cf66
+29.919289 
+29.935045 [24059888] error! Expected 02725666, got 02720076
+29.935162 
+30.026373 [2400ba92] error! Expected 00, got 80
+30.026492 
+30.041187 [2401cad2] error! Expected 00, got 10
+30.041316 
+30.059113 [240334b0] error! Expected ff, got f7
+30.059405 
+30.063367 [240334b1] error! Expected ff, got 00
+30.063453 
+30.083411 [24049e20] error! Expected b54bce66, got b500cf66
+30.084004 
+30.100349 [24059888] error! Expected 02725666, got 02720076
+30.100702 
+30.191341 [2400ba92] error! Expected 00, got 80
+30.191917 
+30.206061 [2401cad2] error! Expected 00, got 10
+30.206414 
+30.224336 [240334b0] error! Expected ff, got f7
+30.224629 
+30.228198 [240334b1] error! Expected ff, got 00
+30.228438 
+30.249237 [24049e20] error! Expected b54bce66, got b500cf66
+30.249560 
+30.265447 [24059888] error! Expected 02725666, got 02720076
+30.266113 
+30.356289 [2400ba92] error! Expected 00, got 80
+30.356491 
+30.371199 [2401cad2] error! Expected 00, got 10
+30.371429 
+30.389284 [240334b0] error! Expected ff, got f7
+30.389809 
+30.393143 [240334b1] error! Expected ff, got 00
+30.393282 
+30.413231 [24049e20] error! Expected b54bce66, got b500cf66
+30.414048 
+30.430247 [24059888] error! Expected 02725666, got 02720076
+30.431239 
+30.521271 [2400ba92] error! Expected 00, got 80
+30.521339 
+30.536089 [2401cad2] error! Expected 00, got 10
+30.536327 
+30.554059 [240334b0] error! Expected ff, got f7
+30.554129 
+30.558205 [240334b1] error! Expected ff, got 00
+30.558243 
+30.578960 [24049e20] error! Expected b54bce66, got b500cf66
+30.579201 
+30.595095 [24059888] error! Expected 02725666, got 02720076
+30.596087 
+30.686441 [2400ba92] error! Expected 00, got 80
+30.686718 
+30.701320 [2401cad2] error! Expected 00, got 10
+30.701550 
+30.719341 [240334b0] error! Expected ff, got f7
+30.719798 
+30.723271 [240334b1] error! Expected ff, got 00
+30.723396 
+30.743196 [24049e20] error! Expected b54bce66, got b500cf66
+30.744122 
+30.760398 [24059888] error! Expected 02725666, got 02720076
+30.760528 
+30.851335 [2400ba92] error! Expected 00, got 80
+30.851877 
+30.866386 [2401cad2] error! Expected 00, got 10
+30.866676 
+30.884184 [240334b0] error! Expected ff, got f7
+30.884376 
+30.888160 [240334b1] error! Expected ff, got 00
+30.888227 
+30.909172 [24049e20] error! Expected b54bce66, got b500cf66
+30.909452 
+30.925062 [24059888] error! Expected 02725666, got 02720076
+30.926115 
+31.016143 [2400ba92] error! Expected 00, got 80
+31.016206 
+31.031018 [2401cad2] error! Expected 00, got 10
+31.031083 
+31.049031 [240334b0] error! Expected ff, got f7
+31.049093 
+31.053096 [240334b1] error! Expected ff, got 00
+31.053128 
+31.074015 [24049e20] error! Expected b54bce66, got b500cf66
+31.074078 
+31.090029 [24059888] error! Expected 02725666, got 02720076
+31.090991 
+31.180990 [2400ba92] error! Expected 00, got 80
+31.181055 
+31.196205 [2401cad2] error! Expected 00, got 10
+31.196282 
+31.214083 [240334b0] error! Expected ff, got f7
+31.214148 
+31.218120 [240334b1] error! Expected ff, got 00
+31.218207 
+31.239210 [24049e20] error! Expected b54bce66, got b500cf66
+31.239277 
+31.256259 [24059888] error! Expected 02725666, got 02720076
+31.256328 
+31.346162 [2400ba92] error! Expected 00, got 80
+31.346439 
+31.361236 [2401cad2] error! Expected 00, got 10
+31.361475 
+31.379227 [240334b0] error! Expected ff, got f7
+31.379358 
+31.383154 [240334b1] error! Expected ff, got 00
+31.383238 
+31.404183 [24049e20] error! Expected b54bce66, got b500cf66
+31.404423 
+31.421353 [24059888] error! Expected 02725666, got 02720076
+31.421462 
+31.511135 [2400ba92] error! Expected 00, got 80
+31.511249 
+31.526261 [2401cad2] error! Expected 00, got 10
+31.526385 
+31.544043 [240334b0] error! Expected ff, got f7
+31.544321 
+31.548277 [240334b1] error! Expected ff, got 00
+31.548349 
+31.569364 [24049e20] error! Expected b54bce66, got b500cf66
+31.569480 
+31.586059 [24059888] error! Expected 02725666, got 02720076
+31.587093 
+31.676272 [2400ba92] error! Expected 00, got 80
+31.676386 
+31.691297 [2401cad2] error! Expected 00, got 10
+31.691437 
+31.709161 [240334b0] error! Expected ff, got f7
+31.709281 
+31.713162 [240334b1] error! Expected ff, got 00
+31.713236 
+31.734252 [24049e20] error! Expected b54bce66, got b500cf66
+31.734371 
+31.751059 [24059888] error! Expected 02725666, got 02720076
+31.751155 
+31.841233 [2400ba92] error! Expected 00, got 80
+31.841354 
+31.856123 [2401cad2] error! Expected 00, got 10
+31.856253 
+31.874276 [240334b0] error! Expected ff, got f7
+31.874404 
+31.878196 [240334b1] error! Expected ff, got 00
+31.878276 
+31.899279 [24049e20] error! Expected b54bce66, got b500cf66
+31.899392 
+31.916145 [24059888] error! Expected 02725666, got 02720076
+31.916317 
+32.006280 [2400ba92] error! Expected 00, got 80
+32.006401 
+32.021308 [2401cad2] error! Expected 00, got 10
+32.021420 
+32.039067 [240334b0] error! Expected ff, got f7
+32.040134 
+32.043132 [240334b1] error! Expected ff, got 00
+32.043197 
+32.064338 [24049e20] error! Expected b54bce66, got b500cf66
+32.064597 
+32.081167 [24059888] error! Expected 02725666, got 02720076
+32.081255 
+32.171093 [2400ba92] error! Expected 00, got 80
+32.171213 
+32.186146 [2401cad2] error! Expected 00, got 10
+32.186291 
+32.204322 [240334b0] error! Expected ff, got f7
+32.204997 
+32.208052 [240334b1] error! Expected ff, got 00
+32.208151 
+32.229173 [24049e20] error! Expected b54bce66, got b500cf66
+32.229253 
+32.246252 [24059888] error! Expected 02725666, got 02720076
+32.246345 
+32.336215 [2400ba92] error! Expected 00, got 80
+32.337145 
+32.351579 [2401cad2] error! Expected 00, got 10
+32.351764 
+32.370139 [240334b0] error! Expected ff, got f7
+32.370317 
+32.373178 [240334b1] error! Expected ff, got 00
+32.373220 
+32.394302 [24049e20] error! Expected b54bce66, got b500cf66
+32.394470 
+32.411132 [24059888] error! Expected 02725666, got 02720076
+32.411238 
+32.501230 [2400ba92] error! Expected 00, got 80
+32.502226 
+32.516283 [2401cad2] error! Expected 00, got 10
+32.516475 
+32.535238 [240334b0] error! Expected ff, got f7
+32.535359 
+32.538199 [240334b1] error! Expected ff, got 00
+32.538274 
+32.559360 [24049e20] error! Expected b54bce66, got b500cf66
+32.559485 
+32.576193 [24059888] error! Expected 02725666, got 02720076
+32.576747 
+32.666443 [2400ba92] error! Expected 00, got 80
+32.667157 
+32.681262 [2401cad2] error! Expected 00, got 10
+32.681699 
+32.700101 [240334b0] error! Expected ff, got f7
+32.700606 
+32.703152 [240334b1] error! Expected ff, got 00
+32.703432 
+32.724202 [24049e20] error! Expected b54bce66, got b500cf66
+32.724417 
+32.741335 [24059888] error! Expected 02725666, got 02720076
+32.741741 
+32.832235 [2400ba92] error! Expected 00, got 80
+32.832547 
+32.846632 [2401cad2] error! Expected 00, got 10
+32.846736 
+32.865316 [240334b0] error! Expected ff, got f7
+32.865769 
+32.868230 [240334b1] error! Expected ff, got 00
+32.868280 
+32.889362 [24049e20] error! Expected b54bce66, got b500cf66
+32.889932 
+32.906452 [24059888] error! Expected 02725666, got 02720076
+32.906770 
+32.997464 [2400ba92] error! Expected 00, got 80
+32.997603 
+33.011161 [2401cad2] error! Expected 00, got 10
+33.011342 
+33.030159 [240334b0] error! Expected ff, got f7
+33.030333 
+33.033165 [240334b1] error! Expected ff, got 00
+33.033430 
+33.054287 [24049e20] error! Expected b54bce66, got b500cf66
+33.054547 
+33.071590 [24059888] error! Expected 02725666, got 02720076
+33.071920 
+33.162223 [2400ba92] error! Expected 00, got 80
+33.162659 
+33.176315 [2401cad2] error! Expected 00, got 10
+33.176840 
+33.195099 [240334b0] error! Expected ff, got f7
+33.195337 
+33.198044 [240334b1] error! Expected ff, got 00
+33.198074 
+33.219334 [24049e20] error! Expected b54bce66, got b500cf66
+33.219879 
+33.236222 [24059888] error! Expected 02725666, got 02720076
+33.236738 
+33.327212 [2400ba92] error! Expected 00, got 80
+33.327606 
+33.341272 [2401cad2] error! Expected 00, got 10
+33.341329 
+33.360370 [240334b0] error! Expected ff, got f7
+33.360487 
+33.363012 [240334b1] error! Expected ff, got 00
+33.363076 
+33.384269 [24049e20] error! Expected b54bce66, got b500cf66
+33.384363 
+33.401360 [24059888] error! Expected 02725666, got 02720076
+33.401458 
+33.492077 [2400ba92] error! Expected 00, got 80
+33.492338 

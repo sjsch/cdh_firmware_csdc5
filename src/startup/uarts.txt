@@ -1,0 +1,14 @@
+A
+stlink: usart3 tx pd8 rx pd9
+c: usart6 tx pg14 pg9
+b: uart7 tx pe8 rx pe7
+
+B
+stlink*: uart5 tx pb13 rx pb12
+a: uart7 tx pe8 rx pe7
+c: uart4 tx pd1 rx pd0
+
+C
+stlink*: uart5 tx pb13 rx pb12
+a: usart6 tx pg14 pg9
+b: uart4 tx pd1 rx pd0
